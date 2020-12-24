@@ -1,0 +1,31 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    ext.kotlinVersion = '1.4.20'
+    ext.hiltVersion = '2.28-alpha'
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
