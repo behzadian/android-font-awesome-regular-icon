@@ -24,7 +24,6 @@ class FontAwesomeRegularIcon : FixedResourceFontTextView {
         try {
             val textCode = typedArray.getInt(R.styleable.FontAwesomeRegularIcon_RegularIcon, 0);
             text = textCode.toChar().toString();
-            typeface = theFont(context, typefaceResID());
         } finally {
             typedArray.recycle();
         }
@@ -32,10 +31,4 @@ class FontAwesomeRegularIcon : FixedResourceFontTextView {
 
     override val inheritedFontResID: Int
         get() = R.font.font_awesome_5_free_regular_400
-
-    override fun setTypeface(tf: Typeface?) {
-        if (tf != theFont(context, typefaceResID()))
-            return;
-        super.setTypeface(tf);
-    }
 }
