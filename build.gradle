@@ -4,11 +4,12 @@ buildscript {
         google()
         jcenter()
     }
-    ext.kotlinVersion = '1.4.20'
-    ext.hiltVersion = '2.28-alpha'
+    ext {
+        fontIconsVersion = "1.0.2"
+        kotlinVersion = '1.4.21'
+    }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.1'
-        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }

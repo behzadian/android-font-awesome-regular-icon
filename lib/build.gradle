@@ -45,6 +45,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.github.behzadian:android-fixed-typeface-textview:0.0.1'
+    api "com.github.behzadian:android-fixed-typeface-textview:$fontIconsVersion"
     //api project(path: ':fixed-typeface-textview-lib')
 }
